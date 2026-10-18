@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "papergamerig",
+  "version": "${version}",
+  "name": "PaperGameRig",
+  "description": "Client-side rig console for PaperGame-style minigames. Liquid-glass UI, per-game toggles, keybinds.",
+  "authors": ["PaperGameRig contributors"],
+  "license": "MIT",
+  "icon": "assets/papergamerig/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.papergamerig.client.PaperGameRigClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": ">=26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
