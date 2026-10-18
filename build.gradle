@@ -10,6 +10,7 @@ base { archivesName = project.archives_base_name }
 
 repositories {
     maven { url = 'https://maven.fabricmc.net/' }
+    maven { url = 'https://maven.parchmentmc.org' }
     mavenCentral()
 }
 
@@ -26,7 +27,9 @@ loom {
 
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings loom.layered { officialMojangMappings() }
+    mappings loom.layered {
+        parchment("org.parchmentmc.data:parchment-${project.minecraft_version}:2025.10.12@zip")
+    }
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 }
